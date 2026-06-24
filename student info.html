@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Information Form</title>
+</head>
+<body>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            background-color: #e1f1f1;
+            margin-top: 100px;
+            padding-left: 30px;
+        }
+
+        h1 {
+            color: #001b91;
+        }
+
+        input, textarea {
+            width: 300px;
+            padding: 8px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        
+        input:valid,
+        textarea:valid {
+            border-color: green;
+        }
+
+        input:invalid,
+        textarea:invalid {
+            border-color: red;
+        }
+
+        input[type="submit"] {
+            width: 120px;
+            background-color: #001b91;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0033cc;
+        }
+    </style>
+
+    <h1>Student Information Form</h1>
+
+    <form>
+        <label for="name">Student Name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="address">Address:</label><br>
+        <textarea id="address" name="address"></textarea><br><br>
+
+        <label for="abcid">ABC ID:</label><br>
+        <input type="text" id="abcid" name="abcid"><br><br>
+
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone"><br><br>
+
+        <label for="dob">Date of Birth:</label><br>
+        <input type="date" id="dob" name="dob"><br><br>
+
+        <label for="class">Class:</label><br>
+        <input type="text" id="class" name="class"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>

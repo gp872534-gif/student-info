@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Information Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e1f1f1;
+            margin-top: 100px;
+            padding-left: 30px;
+        }
+
+        h1 {
+            color: #001b91;
+        }
+
+        input, textarea {
+            width: 300px;
+            padding: 8px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        /* Validation styles */
+        input:valid,
+        textarea:valid {
+            border-color: green;
+        }
+
+        input:invalid,
+        textarea:invalid {
+            border-color: red;
+        }
+
+        input[type="submit"] {
+            width: 120px;
+            background-color: #001b91;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0033cc;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Student Information Form</h1>
+
+    <form>
+        <label for="name">Student Name:</label><br>
+        <input type="text" id="name" name="name"
+               pattern="[A-Za-z ]{3,50}"
+               title="Enter only letters (3-50 characters)"
+               required><br><br>
+
+        <label for="address">Address:</label><br>
+        <textarea id="address" name="address" required></textarea><br><br>
+
+        <label for="abcid">ABC ID:</label><br>
+        <input type="text" id="abcid" name="abcid"
+               pattern="[0-9]{12}"
+               title="ABC ID must be 12 digits"
+               required><br><br>
+
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone"
+               pattern="[0-9]{10}"
+               title="Phone number must be 10 digits"
+               required><br><br>
+
+        <label for="dob">Date of Birth:</label><br>
+        <input type="date" id="dob" name="dob" required><br><br>
+
+        <label for="class">Class:</label><br>
+        <input type="text" id="class" name="class" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
